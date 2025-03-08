@@ -20,7 +20,7 @@ export default function Projects() {
         "A content-sharing platform with JWT authentication, MongoDB, and RESTful APIs. Supports YouTube, Twitter, and Instagram content sharing.",
       tags: ["MongoDB", "React", "REST API", "Node.js"],
       github: "https://github.com/PratikGautam-dev/brainly-project",
-      demo: "https://brainly-frontend-seven.vercel.app/dashboard",
+      demo: "https://brainly-frontend-jiob9gd8o-pratik-gautams-projects.vercel.app/dashboard",
     },
     {
       title: "URL Shortener",
@@ -28,7 +28,7 @@ export default function Projects() {
         "A secure URL shortening service with analytics, click tracking, and authentication using Node.js, Express.js, and MongoDB.",
       tags: ["Node.js", "MongoDB", "Express.js", "Authentication"],
       github: "https://github.com/PratikGautam-dev/url-shortner",
-      demo: "#",
+      demo: "https://shurly.vercel.app/",
     },
     {
       title: "Online Image Editor",
