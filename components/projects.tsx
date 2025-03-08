@@ -35,7 +35,7 @@ export default function Projects() {
       description:
         "An AI-powered image editing tool with background removal, image enhancement, and face restoration. Built using Node.js, ImageKit, and MongoDB.",
       tags: ["Node.js", "ImageKit", "MongoDB", "AI"],
-      github: "https://github.com/PratikGautam-dev/image-editor",
+      github: "https://github.com/PratikGautam-dev/image_editor",
       demo: "https://image-editor-three-dusky.vercel.app/",
     },
     {
