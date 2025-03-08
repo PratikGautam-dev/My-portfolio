@@ -69,9 +69,9 @@ export default function Contact() {
   }
 
   const contactLinks = [
-    { icon: <Mail className="h-6 w-6" />, label: "Email", href: "mailto:pratik@example.com" },
+    { icon: <Mail className="h-6 w-6" />, label: "Email", href: "mailto:gautampratik483@gmail.com" },
     { icon: <Github className="h-6 w-6" />, label: "GitHub", href: "https://github.com/PratikGautam-dev" },
-    { icon: <Linkedin className="h-6 w-6" />, label: "LinkedIn", href: "https://linkedin.com/in/pratik" },
+    { icon: <Linkedin className="h-6 w-6" />, label: "LinkedIn", href: "https://www.linkedin.com/in/pratik-gautam-412b9029a/" },
   ]
 
   return (

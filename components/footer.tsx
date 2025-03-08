@@ -12,7 +12,7 @@ export default function Footer() {
 
         <div className="flex space-x-4">
           <a
-            href="#"
+            href="https://github.com/PratikGautam-dev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -21,7 +21,7 @@ export default function Footer() {
             <span className="sr-only">GitHub</span>
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/pratik-gautam-412b9029a/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -29,7 +29,7 @@ export default function Footer() {
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a href="mailto:pratik@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="mailto:gautampratik483@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
             <Mail className="h-5 w-5" />
             <span className="sr-only">Email</span>
           </a>

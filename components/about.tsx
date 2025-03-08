@@ -50,7 +50,7 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-square rounded-2xl overflow-hidden border-2 border-primary/20">
-              <img src="/placeholder.svg?height=600&width=600" alt="Pratik" className="w-full h-full object-cover" />
+              <img src="/placeholder1.jpg?height=600&width=600" alt="Pratik" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full"></div>
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full"></div>

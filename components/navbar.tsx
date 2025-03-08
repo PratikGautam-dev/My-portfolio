@@ -6,8 +6,11 @@ import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [state, setState] = useState({
+    isScrolled: false,
+    isMobileMenuOpen: false,
+    mounted: false
+  })
 
   const navItems = [
     { name: "Home", href: "#" },
@@ -19,20 +22,35 @@ export default function Navbar() {
   ]
 
   useEffect(() => {
+    setState(prev => ({ ...prev, mounted: true }))
+    
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
+      setState(prev => ({
+        ...prev,
+        isScrolled: window.scrollY > 10
+      }))
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  if (!state.mounted) {
+    return null
+  }
+
+  const toggleMenu = () => {
+    setState(prev => ({
+      ...prev,
+      isMobileMenuOpen: !prev.isMobileMenuOpen
+    }))
+  }
+
   const scrollToSection = (href: string) => {
-    setIsMobileMenuOpen(false)
+    setState(prev => ({
+      ...prev,
+      isMobileMenuOpen: false
+    }))
 
     if (href === "#") {
       window.scrollTo({ top: 0, behavior: "smooth" })
@@ -49,7 +67,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"
+          state.isScrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,10 +98,10 @@ export default function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                onClick={toggleMenu}
                 aria-label="Toggle menu"
               >
-                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {state.isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
             </div>
           </div>
@@ -91,7 +109,7 @@ export default function Navbar() {
       </header>
 
       <AnimatePresence>
-        {isMobileMenuOpen && (
+        {state.isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

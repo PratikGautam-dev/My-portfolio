@@ -167,14 +167,20 @@ export default function Resume() {
                       </div>
                     </DialogContent>
                   </Dialog>
-                  <Button className="gap-2">
-                    <FileDown className="h-4 w-4" />
-                    <span>Download PDF</span>
-                  </Button>
-                  <Button variant="outline" className="gap-2">
-                    <ExternalLink className="h-4 w-4" />
-                    <span>Open in New Tab</span>
-                  </Button>
+                  <Button asChild className="gap-2">
+  <a href="/resume.pdf" download>
+    <FileDown className="h-4 w-4" />
+    <span>Download PDF</span>
+  </a>
+</Button>
+
+<Button asChild variant="outline" className="gap-2">
+  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <ExternalLink className="h-4 w-4" />
+    <span>Open in New Tab</span>
+  </a>
+</Button>
+
                 </div>
               </CardContent>
             </Card>
@@ -222,8 +228,10 @@ export default function Resume() {
                 </div>
                 <div className="mt-8">
                   <Button className="w-full gap-2">
+                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                     <FileDown className="h-4 w-4" />
                     <span>Download Full Resume</span>
+                    </a>
                   </Button>
                 </div>
               </CardContent>
