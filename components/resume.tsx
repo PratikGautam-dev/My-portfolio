@@ -19,7 +19,7 @@ export default function Resume() {
   const resumeHighlights = [
     {
       category: "Education",
-      items: ["B.Tech in AI & Data Science - 2020-2024", "CGPA: 8.5/10"],
+      items: ["B.Tech in AI & Data Science - 2023-2027", "CGPA: 9.3/10"],
     },
     {
       category: "Technical Skills",
